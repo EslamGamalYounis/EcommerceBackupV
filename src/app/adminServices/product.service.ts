@@ -8,8 +8,8 @@ import { Observable } from 'rxjs';
 })
 export class ProductService {
   myObservable:Observable<Array<Product>> ;
-  private baseUrl:string= "http://localhost:3000/api/product";
-  //private baseUrl:string= "https://ecommerceapp-sportswear.herokuapp.com/api/product";
+  //private baseUrl:string= "http://localhost:3000/api/product";
+  private baseUrl:string= "https://ecommerceapp-sportswear.herokuapp.com/api/product";
   passedProduct:Product;
 
   constructor(private httpClient:HttpClient) {
