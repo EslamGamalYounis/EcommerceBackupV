@@ -15,7 +15,6 @@ import { AdminProductsComponent } from './admin-products/admin-products.componen
 import { ProductUpdateComponent } from './admin-products/product-update/product-update.component';
 import { HttpClientModule} from '@angular/common/http';
 import {AppRoutingModule} from './app-routing.module';
-import {AppUserRoutingModule} from './app-userRouting.modules'
 
 import { AdminDashboardComponent } from './admin-dashboard/admin-dashboard.component';
 import {AdminProfileComponent} from './admin-profile/admin-profile.component';

@@ -1,3 +1,4 @@
+import { Router } from '@angular/router';
 import { ProductService } from './../adminServices/product.service';
 import { Product } from './../product/Product';
 import { Component, ElementRef, Input, OnInit, Output, ViewChild, OnDestroy } from '@angular/core';
@@ -14,7 +15,7 @@ export class EditProductComponent implements OnInit ,OnDestroy {
   productOut:Product= new Product(null,"",null,0,"","");
   @ViewChild('warningDiv', {static: true}) warningDiv :ElementRef;
 
-  constructor(private productService:ProductService) {
+  constructor(private productService:ProductService,private router:Router) {
 
    }
   ngOnDestroy(): void {
@@ -25,8 +26,10 @@ export class EditProductComponent implements OnInit ,OnDestroy {
     this.product =this.productService.passedProduct;
     if(this.product!=undefined)
     this.imageSrc = this.product.image;
-
     this.imagePreview = this.imageSrc;
+    if(!this.product){
+      this.product= new Product(null,"",null,0,"","");
+    }
   }
 
 
@@ -41,10 +44,11 @@ export class EditProductComponent implements OnInit ,OnDestroy {
       formData.append("price",price);
       formData.append("details",details);
       formData.append("size",sizes);
-      this.productService.editProduct(title,formData).subscribe((response)=>{
+      this.productService.editProduct(id,formData).subscribe((response)=>{
         if(response){
           console.log(response);
           this.OnDiscard();
+          this.router.navigateByUrl('/AdminDashboardComponent/adminProducts')
         }
       },
       (err)=>{
@@ -60,6 +64,7 @@ export class EditProductComponent implements OnInit ,OnDestroy {
   OnDiscard(){
     this.product=new Product (null,"",null,0,"","");
     this.imageSrc='../../assets/images/uploadImage.png';
+    this.imagePreview ='../../assets/images/uploadImage.png';
   }
 
   imagePreview;

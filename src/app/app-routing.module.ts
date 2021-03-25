@@ -1,6 +1,4 @@
 import { AdminSignoutComponent } from './admin-signout/admin-signout.component';
-import { AdminSignInComponent } from './admin-sign-in/admin-sign-in.component';
-import { SignOutComponent } from './sign-out/sign-out.component';
 import { EditProductComponent } from './edit-product/edit-product.component';
 import { AddProductComponent } from './add-product/add-product.component';
 import { AdminProductsComponent } from './admin-products/admin-products.component';

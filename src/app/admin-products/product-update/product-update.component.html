@@ -1,19 +1,19 @@
 
-<div class="card mb-2 bg-white" style="width: 18rem; position: relative;">
+<div class="card mb-2 bg-white" style="width: 17rem; position: relative;">
 
 <div class="forDivImg">
   <a>
     <img [src]="product.image ||'../../assets/images/uploadImage.png'" class="card-img-top forImage" style="float:left;" alt="...">
   </a>
 </div>
-  <div class="card-body p-1">
+  <div class="card-body p-1 bg-primary text-white " style="border-radius: 7px;">
     <h3 class="card-text text-left">{{product.title}}</h3>
     <h6 class="text-left">size:{{product.size}}</h6>
     <h6 class="text-left">{{product.price}}$</h6>
   </div>
   <div class="delClass" (click)="deleteProduct()">
     <a >
-      <button class="fa fa-trash-o text-secondary delItemHeart" aria-hidden="true"></button>
+      <i class="fa fa-trash-o fa-2x text-secondary delItemHeart" aria-hidden="true"></i>
     </a>
   </div>
 

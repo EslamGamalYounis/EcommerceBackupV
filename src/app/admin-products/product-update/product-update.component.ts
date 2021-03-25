@@ -30,6 +30,7 @@ export class ProductUpdateComponent implements OnInit {
   deleteProduct(){
     this.productService.deleteProduct(this.product.title).subscribe((data)=>{
       console.log(data);
+      this.ngOnInit();
     },(err)=>{console.log(err);
     });
 
