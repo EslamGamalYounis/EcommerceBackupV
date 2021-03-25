@@ -9,7 +9,7 @@ import { OrdersService } from 'src/app/services/orders.service';
 })
 export class AdminOrdersComponent implements OnInit {
   actiondone:boolean
-  orders
+  orders;
   constructor(private orderService :OrdersService) { }
   ngOnInit(): void {
     //call service to get all orders and equal respont to orders lis
@@ -27,6 +27,8 @@ export class AdminOrdersComponent implements OnInit {
 
   change(id,value){
     if(value){
+      console.log(value);
+
       this.orderService.changeStates(id,value).subscribe((res)=>{
         let x =res["success"];
         if(x){

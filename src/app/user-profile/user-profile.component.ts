@@ -12,6 +12,7 @@ export class UserProfileComponent implements OnInit {
   constructor(private profilData :profileData) { }
 
   ngOnInit(): void {
+    this.profile ={_id:"",image:"",username:"",email:"",gender:""};
     this.profilData.getData().subscribe(
       (respond)=>{
         console.log(respond)

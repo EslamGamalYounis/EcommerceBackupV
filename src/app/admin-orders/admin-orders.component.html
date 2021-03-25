@@ -16,7 +16,7 @@
                   <thead>
                     <tr>
                       <th scope="col">No.</th>
-                      <!-- <th scope="col">userId</th> -->
+                      <th scope="col">order ID</th>
                       <th scope="col">UserName</th>
                       <th scope="col">Date</th>
                       <th scope="col">Total Price</th>
@@ -30,27 +30,20 @@
                   <tbody>
                       <tr *ngFor="let order of orders;  let i = index" >
                         <th scope="row">{{i+1}}</th>
-                        <!-- <td>{{order.userId}}</td> -->
-                        <td>{{order.userName}}</td>
+                        <td>{{order._id}}</td>
+                        <td>{{order.username}}</td>
                         <td>{{order.date}}</td>
                         <td>{{order.totalPrice}}</td>
-                        <td>{{order.productName}}</td>
+                        <td><div *ngFor="let title of order.titles">{{title}}</div></td>
                         <td>{{order.status}}</td>
-                        <!-- <td><button (click)=sendid(order.userId) type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
-                          Launch demo modal
-                        </button></td> -->
-                        <!-- <td><i class="fas fa-trash-alt myTrash"></i></td>  -->
+
                         <td >
-                          <button #a  (click)="change(order._Id,a.value)" value="accept"  class="btn btn-success mr-1">Accept</button>
+                          <button #a  (click)="change(order._id,a.value)" value="accept"  class="btn btn-success mr-1">Accept</button>
                           <button #d (click)="change(order._id,d.value)" value="rejected" class="btn btn-danger">rejected</button>
                       </td>
                       </tr>
 
                     </tbody>
-
-                  <!-- <div *ngFor="let order of orders" class="" >
-                      <order [orderDetails]=order></order>
-                    </div> -->
 
                 </table>
           </div>

@@ -27,8 +27,8 @@ import { Subject } from 'rxjs';
          return this.http.get(this.baseUrl,{headers:{authorization:this.getToken()}})
       }
 
-    //const baseUrl= "http://localhost:3000/api/admin/profile";
-     private adminBaseUrl = 'https://ecommerceapp-sportswear.herokuapp.com/admin/profile';
+    //private adminBaseUrl= "http://localhost:3000/api/admin/profile";
+    private adminBaseUrl = 'https://ecommerceapp-sportswear.herokuapp.com/admin/profile';
 
       getAdminData(){
         return this.http.get(this.adminBaseUrl,{headers:{authorization:this.getToken()}})

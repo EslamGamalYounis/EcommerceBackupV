@@ -11,6 +11,7 @@ export class AdminProfileComponent implements OnInit {
   constructor(private profilData :profileData) { }
 
   ngOnInit(): void {
+    this.profile ={_id:"",image:"",username:"",email:"",gender:""};
     this.profilData.getAdminData().subscribe(
       (respond)=>{
         console.log(respond)

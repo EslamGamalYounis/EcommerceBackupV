@@ -33,17 +33,7 @@ export class AdminSignInComponent implements OnInit {
 
       let username=data["userName"];
       localStorage.setItem("username",username);
-      this.router.navigateByUrl('/AdminDashboardComponent');
-      //islam yzabat elroute da
-     // this.router.navigate(['/profile']);
-        // this.tokenStorage.saveToken(data.accessToken);
-        // this.tokenStorage.saveUser(data);
-
-        // this.isLoginFailed = false;
-        // this.isLoggedIn = true;
-        // this.roles = this.tokenStorage.getUser().roles;
-        // this.reloadPage();
-
+      this.router.navigateByUrl('/AdminDashboardComponent/adminProducts');
       },
       err => {
         this.errorMessage = err.error.message;

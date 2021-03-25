@@ -31,7 +31,8 @@ export class OrdersService {
     return this.http.delete(this.baseUrl+"delete/"+id);
   }
 
-  changeStates(id,status){
+  changeStates(id,value){
+    const status ={status:value}
     return this.http.patch(this.baseUrl+"adminedit/"+id,status);
   }
 
