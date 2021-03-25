@@ -27,3 +27,14 @@
     background-color: blueviolet;
     color: white;
   }
+
+  .forImage{
+    width: 100%;
+    overflow: hidden;
+}
+
+.forDivImg{
+  width: auto;
+  height: 300px;
+  overflow: hidden ;
+}
