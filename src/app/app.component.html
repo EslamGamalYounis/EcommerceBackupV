@@ -1,0 +1,37 @@
+<div class="navbar navbar-expand-lg navbar-light navBgColor container-fluid">
+
+  <div class="navbar navbar-expand-lg navbar-light navBgColor d-inline text-left">
+    <div class="container-fluid justify-content-center">
+      <a class="navbar-brand Active WebsiteHeader">Ecommerce For Clothes</a>
+    </div>
+  </div>
+
+  <div class="container justify-content-end">
+    <ul class="nav justify-content-end">
+      <li class="nav-item">
+        <a class="nav-link text-white firstNavAnchor" [routerLinkActiveOptions]='{exact:true}' routerLinkActive="text-danger" routerLink="/generalHome">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white firstNavAnchor" routerLinkActive="text-danger"  routerLink="/help">About</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white firstNavAnchor" routerLinkActive="text-danger" routerLink="/signUp">Sign UP</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white firstNavAnchor" routerLinkActive="text-danger" routerLink="/adminSignIn">Admin SignIn</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link text-white firstNavAnchor" routerLinkActive="text-danger" routerLink="/signIn">Sign In</a>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<div class="container-fluid pl-0 pr-0 bg-white">
+  <router-outlet></router-outlet>
+</div>
+
+
+
+<!-- <app-admin-products></app-admin-products>
+<app-add-product></app-add-product> -->

@@ -1,0 +1,47 @@
+<div class="container-fluid" style="margin-top:30px;">
+  <div class="row">
+    <div class="col-md-7">
+      <div id="carouselExampleSlidesOnly" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner m-auto">
+          <div class="carousel-item active">
+              <img src="../../assets/images/fashion-clothing-promotion.jpg" class="d-block w-100 h-50 promImgClass" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/images/istockphoto-1139910735-1024x1024.jpg" class="d-block w-100 h-50 promImgClass" alt="...">
+          </div>
+          <div class="carousel-item">
+            <img src="../../assets/images/istockphoto-1144285095-1024x1024.jpg" class="d-block w-100 h-50 promImgClass" alt="...">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="fixedPromotion">
+        <a>
+          <img src="../../assets/images/pro1.jpg" class="fixedProImg w-100">
+        </a>
+      </div>
+
+      <div class="fixedPromotion">
+        <a>
+          <img src="../../assets/images/pro2.jpg" class="fixedProImg w-100">
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<div class="container">
+  <div class="text-primary text-center">
+    <h1>Featured Products</h1>
+  </div>
+  <div class="row p-4 bg-white">
+    <div *ngFor="let product of products" class="productCard bg-light col-md-4 text-center box-shadow-full" >
+      <app-product [product]=product></app-product>
+    </div>
+
+  </div>
+</div>
+

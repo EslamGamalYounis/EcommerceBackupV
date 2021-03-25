@@ -1,0 +1,13 @@
+.firstNavAnchor:hover{
+  background-color:rgb(4, 4, 117);
+  }
+
+  .WebsiteHeader{
+    color: white;
+    font-size: 30px;
+    font-weight: bold;
+  }
+
+  .navBgColor{
+    background-color: rgb(5, 5, 177) !important;
+  }
